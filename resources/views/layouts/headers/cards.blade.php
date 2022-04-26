@@ -1,4 +1,5 @@
 <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
+<script src="https://unpkg.com/feather-icons"></script>
     <div class="container-fluid">
         <div class="header-body">
             <!-- Card stats -->
@@ -8,12 +9,12 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col">
-                                    <h5 class="card-title text-uppercase text-muted mb-0">Traffic</h5>
+                                    <h5 class="card-title text-uppercase text-muted mb-0">Swapping Stations</h5>
                                     <span class="h2 font-weight-bold mb-0">350,897</span>
                                 </div>
                                 <div class="col-auto">
                                     <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
-                                        <i class="fas fa-chart-bar"></i>
+                                        <i data-feather="battery"></i>
                                     </div>
                                 </div>
                             </div>
@@ -29,12 +30,12 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col">
-                                    <h5 class="card-title text-uppercase text-muted mb-0">New users</h5>
+                                    <h5 class="card-title text-uppercase text-muted mb-0">Customers</h5>
                                     <span class="h2 font-weight-bold mb-0">2,356</span>
                                 </div>
                                 <div class="col-auto">
                                     <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
-                                        <i class="fas fa-chart-pie"></i>
+                                        <i data-feather="user"></i>
                                     </div>
                                 </div>
                             </div>
@@ -50,12 +51,12 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col">
-                                    <h5 class="card-title text-uppercase text-muted mb-0">Sales</h5>
+                                    <h5 class="card-title text-uppercase text-muted mb-0">Transactions</h5>
                                     <span class="h2 font-weight-bold mb-0">924</span>
                                 </div>
                                 <div class="col-auto">
                                     <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
-                                        <i class="fas fa-users"></i>
+                                        <i data-feather="zap"></i>
                                     </div>
                                 </div>
                             </div>
@@ -76,7 +77,7 @@
                                 </div>
                                 <div class="col-auto">
                                     <div class="icon icon-shape bg-info text-white rounded-circle shadow">
-                                        <i class="fas fa-percent"></i>
+                                        <i data-feather="trending-up"></i>
                                     </div>
                                 </div>
                             </div>
@@ -90,4 +91,7 @@
             </div>
         </div>
     </div>
+    <script>
+          feather.replace()
+        </script>
 </div>

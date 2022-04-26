@@ -7,7 +7,7 @@
         </button>
         <!-- Brand -->
         <a class="navbar-brand pt-0" href="{{ route('home') }}">
-            <img src="{{ asset('argon') }}/img/brand/blue.png" class="navbar-brand-img" alt="...">
+            <img src="../assets/img/brand/brin.png" class="navbar-brand-img" alt="...">
         </a>
         <!-- User -->
         <ul class="nav align-items-center d-md-none">
@@ -55,7 +55,7 @@
                 <div class="row">
                     <div class="col-6 collapse-brand">
                         <a href="{{ route('home') }}">
-                            <img src="{{ asset('argon') }}/img/brand/blue.png">
+                            <img src="../assets/img/brand/brin.png">
                         </a>
                     </div>
                     <div class="col-6 collapse-close">
@@ -81,34 +81,51 @@
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('home') }}">
-                        <i class="text-blue" data-feather="home" font-size="16px"></i> {{ __('Home') }}
+                        <div class="icon icon-shape">
+                            <i data-feather="home"></i>
+                        </div>
+                        {{ __('Home') }}
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('user.index') }}">
-                        <i data-feather="user"></i> {{ __('Customers') }}
+                        <div class="icon icon-shape">
+                            <i class="ni" data-feather="user"></i>
+                        </div>
+                        {{ __('Customers') }}
                     </a>
                 </li>
 
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('icons') }}">
-                        <i data-feather="zap"></i> {{ __('Activities') }}
+                        <div class="icon icon-shape">
+                            <i class="ni" data-feather="zap"></i>
+                        </div>
+                        {{ __('Activities') }}
                     </a>
                 </li>
                 <li class="nav-item ">
                     <a class="nav-link" href="{{ route('map') }}">
-                        <i data-feather="battery"></i> {{ __('Assets') }}
+                        <div class="icon icon-shape">
+                            <i class="ni" data-feather="battery"></i>
+                        </div>
+                        {{ __('Assets') }}
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('table') }}">
-                      <i data-feather="server"></i>
+                      <div class="icon icon-shape">
+                          <i class="ni" data-feather="server"></i>
+                      </div>
                       <span class="nav-link-text">Devices</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i data-feather="table"></i> {{ __('Reports') }}
+                    <a class="nav-link" href="{{ route('upgrade') }}">
+                        <div class="icon icon-shape">
+                            <i class="ni" data-feather="table"></i>
+                        </div>
+                        {{ __('Reports') }}
                     </a>
                 </li>
             </ul>
