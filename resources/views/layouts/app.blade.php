@@ -7,7 +7,7 @@
 
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Argon Dashboard') }}</title>
+        <title>{{ config('app.name', 'Dashboard Sistem Pengisian Baterai Kendaraan Listrik Umum') }}</title>
         <!-- Favicon -->
         <link href="../assets/img/brand/brin.png" rel="icon" type="image/png">
         <!-- Fonts -->
@@ -17,6 +17,7 @@
         <!-- Icons -->
         <link href="{{ asset('argon') }}/vendor/nucleo/css/nucleo.css" rel="stylesheet">
         <link href="{{ asset('argon') }}/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+        <script src="https://unpkg.com/feather-icons"></script>
         <!-- Argon CSS -->
         <link type="text/css" href="{{ asset('argon') }}/css/argon.css?v=1.0.0" rel="stylesheet">
     </head>
@@ -44,5 +45,6 @@
 
         <!-- Argon JS -->
         <script src="{{ asset('argon') }}/js/argon.js?v=1.0.0"></script>
+        <script>feather.replace()</script>
     </body>
 </html>

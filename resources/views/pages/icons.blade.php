@@ -1,11 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('layouts.headers.cards')
+    @include('layouts.cards.swap-cards')
 
     <div class="container-fluid mt--7">
         <div class="row">
-            <div class="col">
+            <div class="col-xl-12">
+              <div class="card border-0">
+                <div id="map-default" class="map-canvas" data-lat="40.748817" data-lng="-73.985428" style="height: 600px;"></div>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
+              </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-12">
                 <div class="card shadow">
                     <div class="card-header border-0">
                         <div class="row align-items-center">
@@ -21,119 +29,37 @@
                       <table class="table align-items-center table-flush">
                         <thead class="thead-light">
                           <tr>
-                            <th scope="col" class="sort" data-sort="name">Project</th>
-                            <th scope="col" class="sort" data-sort="budget">Budget</th>
-                            <th scope="col" class="sort" data-sort="status">Status</th>
-                            <th scope="col">Users</th>
-                            <th scope="col" class="sort" data-sort="completion">Completion</th>
-                            <th scope="col"></th>
-                          </tr>
+                              <th scope="col" class="sort" data-sort="name">Name</th>
+                              <th scope="col" class="sort" data-sort="chargebox">Chargebox ID</th>
+                              <th scope="col" class="sort" data-sort="city">City</th>
+                              <th scope="col" class="sort" data-sort="heartbeat">Last Heartbeat</th>
+                              <th scope="col" class="sort" data-sort="status">Status</th>
+                              <th scope="col"></th>
+                            </tr>
                         </thead>
                         <tbody class="list">
                           <tr>
                             <th scope="row">
                               <div class="media align-items-center">
-                                <a href="#" class="avatar rounded-circle mr-3">
-                                  <img alt="Image placeholder" src="../assets/img/theme/bootstrap.jpg">
-                                </a>
                                 <div class="media-body">
-                                  <span class="name mb-0 text-sm">Argon Design System</span>
+                                  <span class="name mb-0 text-sm">SPBKLU Serpong</span>
                                 </div>
                               </div>
                             </th>
-                            <td class="budget">
-                              $2500 USD
+                            <td class="chargebox">
+                              T54_IT1_4118_062
                             </td>
-                            <td>
-                              <span class="badge badge-dot mr-4">
-                                <i class="bg-warning"></i>
-                                <span class="status">pending</span>
-                              </span>
+                            <td class="city">
+                              Tangerang Selatan
                             </td>
-                            <td>
-                              <div class="avatar-group">
-                                <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Ryan Tompson">
-                                  <img alt="Image placeholder" src="../assets/img/theme/team-1.jpg">
-                                </a>
-                                <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Romina Hadid">
-                                  <img alt="Image placeholder" src="../assets/img/theme/team-2.jpg">
-                                </a>
-                                <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Alexander Smith">
-                                  <img alt="Image placeholder" src="../assets/img/theme/team-3.jpg">
-                                </a>
-                                <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Jessica Doe">
-                                  <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg">
-                                </a>
-                              </div>
+                            <td class="heartbeat">
+                              2022-04-16 06:32:22
                             </td>
-                            <td>
-                              <div class="d-flex align-items-center">
-                                <span class="completion mr-2">60%</span>
-                                <div>
-                                  <div class="progress">
-                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="text-right">
-                              <div class="dropdown">
-                                <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  <i class="fas fa-ellipsis-v"></i>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                  <a class="dropdown-item" href="#">Action</a>
-                                  <a class="dropdown-item" href="#">Another action</a>
-                                  <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">
-                              <div class="media align-items-center">
-                                <a href="#" class="avatar rounded-circle mr-3">
-                                  <img alt="Image placeholder" src="../assets/img/theme/angular.jpg">
-                                </a>
-                                <div class="media-body">
-                                  <span class="name mb-0 text-sm">Angular Now UI Kit PRO</span>
-                                </div>
-                              </div>
-                            </th>
-                            <td class="budget">
-                              $1800 USD
-                            </td>
-                            <td>
+                            <td class="status">
                               <span class="badge badge-dot mr-4">
                                 <i class="bg-success"></i>
-                                <span class="status">completed</span>
+                                <span class="status">Available</span>
                               </span>
-                            </td>
-                            <td>
-                              <div class="avatar-group">
-                                <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Ryan Tompson">
-                                  <img alt="Image placeholder" src="../assets/img/theme/team-1.jpg">
-                                </a>
-                                <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Romina Hadid">
-                                  <img alt="Image placeholder" src="../assets/img/theme/team-2.jpg">
-                                </a>
-                                <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Alexander Smith">
-                                  <img alt="Image placeholder" src="../assets/img/theme/team-3.jpg">
-                                </a>
-                                <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Jessica Doe">
-                                  <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg">
-                                </a>
-                              </div>
-                            </td>
-                            <td>
-                              <div class="d-flex align-items-center">
-                                <span class="completion mr-2">100%</span>
-                                <div>
-                                  <div class="progress">
-                                    <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
-                                  </div>
-                                </div>
-                              </div>
                             </td>
                             <td class="text-right">
                               <div class="dropdown">
@@ -141,202 +67,170 @@
                                   <i class="fas fa-ellipsis-v"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                  <a class="dropdown-item" href="#">Action</a>
-                                  <a class="dropdown-item" href="#">Another action</a>
-                                  <a class="dropdown-item" href="#">Something else here</a>
+                                  <a class="dropdown-item" href="#">View</a>
+                                  <a class="dropdown-item" href="#">Edit</a>
+                                  <a class="dropdown-item" href="#">Delete</a>
                                 </div>
                               </div>
                             </td>
                           </tr>
                           <tr>
-                            <th scope="row">
-                              <div class="media align-items-center">
-                                <a href="#" class="avatar rounded-circle mr-3">
-                                  <img alt="Image placeholder" src="../assets/img/theme/sketch.jpg">
-                                </a>
-                                <div class="media-body">
-                                  <span class="name mb-0 text-sm">Black Dashboard</span>
-                                </div>
-                              </div>
-                            </th>
-                            <td class="budget">
-                              $3150 USD
-                            </td>
-                            <td>
-                              <span class="badge badge-dot mr-4">
-                                <i class="bg-danger"></i>
-                                <span class="status">delayed</span>
-                              </span>
-                            </td>
-                            <td>
-                              <div class="avatar-group">
-                                <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Ryan Tompson">
-                                  <img alt="Image placeholder" src="../assets/img/theme/team-1.jpg">
-                                </a>
-                                <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Romina Hadid">
-                                  <img alt="Image placeholder" src="../assets/img/theme/team-2.jpg">
-                                </a>
-                                <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Alexander Smith">
-                                  <img alt="Image placeholder" src="../assets/img/theme/team-3.jpg">
-                                </a>
-                                <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Jessica Doe">
-                                  <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg">
-                                </a>
-                              </div>
-                            </td>
-                            <td>
-                              <div class="d-flex align-items-center">
-                                <span class="completion mr-2">72%</span>
-                                <div>
-                                  <div class="progress">
-                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" style="width: 72%;"></div>
+                              <th scope="row">
+                                <div class="media align-items-center">
+                                  <div class="media-body">
+                                    <span class="name mb-0 text-sm">SPBKLU Thamrin</span>
                                   </div>
                                 </div>
-                              </div>
-                            </td>
-                            <td class="text-right">
-                              <div class="dropdown">
-                                <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  <i class="fas fa-ellipsis-v"></i>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                  <a class="dropdown-item" href="#">Action</a>
-                                  <a class="dropdown-item" href="#">Another action</a>
-                                  <a class="dropdown-item" href="#">Something else here</a>
+                              </th>
+                              <td class="chargebox">
+                                T54_IT1_4118_063
+                              </td>
+                              <td class="city">
+                                Jakarta Pusat
+                              </td>
+                              <td class="heartbeat">
+                                2022-04-19 17:23:56
+                              </td>
+                              <td class="status">
+                                <span class="badge badge-dot mr-4">
+                                  <i class="bg-success"></i>
+                                  <span class="status">Available</span>
+                                </span>
+                              </td>
+                              <td class="text-right">
+                                <div class="dropdown">
+                                  <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                  </a>
+                                  <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                    <a class="dropdown-item" href="#">View</a>
+                                    <a class="dropdown-item" href="#">Edit</a>
+                                    <a class="dropdown-item" href="#">Delete</a>
+                                  </div>
                                 </div>
-                              </div>
-                            </td>
-                          </tr>
+                              </td>
+                            </tr>
+                              <tr>
+                                  <th scope="row">
+                                    <div class="media align-items-center">
+                                      <div class="media-body">
+                                        <span class="name mb-0 text-sm">SPBKLU MT Haryono</span>
+                                      </div>
+                                    </div>
+                                  </th>
+                                  <td class="chargebox">
+                                    T54_IT1_4118_062
+                                  </td>
+                                  <td class="city">
+                                    Jakarta Timur
+                                  </td>
+                                  <td class="heartbeat">
+                                    2022-04-17 12:23:09
+                                  </td>
+                                  <td class="status">
+                                    <span class="badge badge-dot mr-4">
+                                      <i class="bg-success"></i>
+                                      <span class="status">Available</span>
+                                    </span>
+                                  </td>
+                                  <td class="text-right">
+                                    <div class="dropdown">
+                                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                      </a>
+                                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                        <a class="dropdown-item" href="#">View</a>
+                                        <a class="dropdown-item" href="#">Edit</a>
+                                        <a class="dropdown-item" href="#">Delete</a>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                              <tr>
+                                  <th scope="row">
+                                    <div class="media align-items-center">
+                                      <div class="media-body">
+                                        <span class="name mb-0 text-sm">SPBKLU Lenteng Agung</span>
+                                      </div>
+                                    </div>
+                                  </th>
+                                  <td class="chargebox">
+                                    T54_IT1_4118_062
+                                  </td>
+                                  <td class="city">
+                                    Jakarta Selatan
+                                  </td>
+                                  <td class="heartbeat">
+                                    2022-04-06 12:21:35
+                                  </td>
+                                  <td class="status">
+                                    <span class="badge badge-dot mr-4">
+                                      <i class="bg-success"></i>
+                                      <span class="status">Available</span>
+                                    </span>
+                                  </td>
+                                  <td class="text-right">
+                                    <div class="dropdown">
+                                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                      </a>
+                                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                        <a class="dropdown-item" href="#">View</a>
+                                        <a class="dropdown-item" href="#">Edit</a>
+                                        <a class="dropdown-item" href="#">Delete</a>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
                           <tr>
-                            <th scope="row">
-                              <div class="media align-items-center">
-                                <a href="#" class="avatar rounded-circle mr-3">
-                                  <img alt="Image placeholder" src="../assets/img/theme/react.jpg">
-                                </a>
-                                <div class="media-body">
-                                  <span class="name mb-0 text-sm">React Material Dashboard</span>
-                                </div>
-                              </div>
-                            </th>
-                            <td class="budget">
-                              $4400 USD
-                            </td>
-                            <td>
-                              <span class="badge badge-dot mr-4">
-                                <i class="bg-info"></i>
-                                <span class="status">on schedule</span>
-                              </span>
-                            </td>
-                            <td>
-                              <div class="avatar-group">
-                                <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Ryan Tompson">
-                                  <img alt="Image placeholder" src="../assets/img/theme/team-1.jpg">
-                                </a>
-                                <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Romina Hadid">
-                                  <img alt="Image placeholder" src="../assets/img/theme/team-2.jpg">
-                                </a>
-                                <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Alexander Smith">
-                                  <img alt="Image placeholder" src="../assets/img/theme/team-3.jpg">
-                                </a>
-                                <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Jessica Doe">
-                                  <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg">
-                                </a>
-                              </div>
-                            </td>
-                            <td>
-                              <div class="d-flex align-items-center">
-                                <span class="completion mr-2">90%</span>
-                                <div>
-                                  <div class="progress">
-                                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+                              <th scope="row">
+                                <div class="media align-items-center">
+                                  <div class="media-body">
+                                    <span class="name mb-0 text-sm">SPBKLU Grogol</span>
                                   </div>
                                 </div>
-                              </div>
-                            </td>
-                            <td class="text-right">
-                              <div class="dropdown">
-                                <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  <i class="fas fa-ellipsis-v"></i>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                  <a class="dropdown-item" href="#">Action</a>
-                                  <a class="dropdown-item" href="#">Another action</a>
-                                  <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">
-                              <div class="media align-items-center">
-                                <a href="#" class="avatar rounded-circle mr-3">
-                                  <img alt="Image placeholder" src="../assets/img/theme/vue.jpg">
-                                </a>
-                                <div class="media-body">
-                                  <span class="name mb-0 text-sm">Vue Paper UI Kit PRO</span>
-                                </div>
-                              </div>
-                            </th>
-                            <td class="budget">
-                              $2200 USD
-                            </td>
-                            <td>
-                              <span class="badge badge-dot mr-4">
-                                <i class="bg-success"></i>
-                                <span class="status">completed</span>
-                              </span>
-                            </td>
-                            <td>
-                              <div class="avatar-group">
-                                <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Ryan Tompson">
-                                  <img alt="Image placeholder" src="../assets/img/theme/team-1.jpg">
-                                </a>
-                                <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Romina Hadid">
-                                  <img alt="Image placeholder" src="../assets/img/theme/team-2.jpg">
-                                </a>
-                                <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Alexander Smith">
-                                  <img alt="Image placeholder" src="../assets/img/theme/team-3.jpg">
-                                </a>
-                                <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Jessica Doe">
-                                  <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg">
-                                </a>
-                              </div>
-                            </td>
-                            <td>
-                              <div class="d-flex align-items-center">
-                                <span class="completion mr-2">100%</span>
-                                <div>
-                                  <div class="progress">
-                                    <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+                              </th>
+                              <td class="chargebox">
+                                T54_IT1_4118_062
+                              </td>
+                              <td class="city">
+                                Jakarta Barat
+                              </td>
+                              <td class="heartbeat">
+                                2022-04-22 04:45:16
+                              </td>
+                              <td class="status">
+                                <span class="badge badge-dot mr-4">
+                                  <i class="bg-success"></i>
+                                  <span class="status">Available</span>
+                                </span>
+                              </td>
+                              <td class="text-right">
+                                <div class="dropdown">
+                                  <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                  </a>
+                                  <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                    <a class="dropdown-item" href="#">View</a>
+                                    <a class="dropdown-item" href="#">Edit</a>
+                                    <a class="dropdown-item" href="#">Delete</a>
                                   </div>
                                 </div>
-                              </div>
-                            </td>
-                            <td class="text-right">
-                              <div class="dropdown">
-                                <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  <i class="fas fa-ellipsis-v"></i>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                  <a class="dropdown-item" href="#">Action</a>
-                                  <a class="dropdown-item" href="#">Another action</a>
-                                  <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
+                              </td>
+                            </tr>
                         </tbody>
                       </table>
                     </div>
                 </div>
             </div>
         </div>
-
-        @include('layouts.footers.auth')
+          @include('layouts.footers.auth')
     </div>
 @endsection
 
 @push('js')
     <script src="{{ asset('argon') }}/vendor/chart.js/dist/Chart.min.js"></script>
     <script src="{{ asset('argon') }}/vendor/chart.js/dist/Chart.extension.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
+    <script src="../assets/js/argon.js?v=1.2.0"></script>
 @endpush

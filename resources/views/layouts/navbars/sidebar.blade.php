@@ -101,7 +101,7 @@
                         <div class="icon icon-shape">
                             <i class="ni" data-feather="zap"></i>
                         </div>
-                        {{ __('Activities') }}
+                        {{ __('Swapping Stations') }}
                     </a>
                 </li>
                 <li class="nav-item ">
@@ -109,15 +109,7 @@
                         <div class="icon icon-shape">
                             <i class="ni" data-feather="battery"></i>
                         </div>
-                        {{ __('Assets') }}
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('table') }}">
-                      <div class="icon icon-shape">
-                          <i class="ni" data-feather="server"></i>
-                      </div>
-                      <span class="nav-link-text">Devices</span>
+                        {{ __('Transactions') }}
                     </a>
                 </li>
                 <li class="nav-item">

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('layouts.headers.cards')
+    @include('layouts.cards.report-cards')
 
     <div class="container-fluid mt--7">
         <div class="row">
